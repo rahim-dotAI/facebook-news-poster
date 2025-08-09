@@ -4,9 +4,9 @@ export default defineComponent({
   async run({ steps }) {
     const latestArticle = steps.sort_latest_news.$return_value;
 
-    const zapierWebhookUrl = "https://hooks.zapier.com/hooks/catch/24031742/u4hih8y/";
+    const zapierWebhookUrl = "https://hooks.zapier.com/hooks/catch///";
 
-    try {
+try {
       await axios.post(zapierWebhookUrl, {
         title: latestArticle.title,
         link: latestArticle.link,
